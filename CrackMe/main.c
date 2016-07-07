@@ -13,7 +13,7 @@ HANDLE openFile(LPCTSTR filename) {
 }
 
 void deoffuscate(char* buffer, int size) {
-    int magicSize = 0;
+    size_t magicSize = 0;
 
     if (magicSize > size) {
         printf("Your heart is too small.\n");
@@ -23,7 +23,7 @@ void deoffuscate(char* buffer, int size) {
     memset(buffer, 0, size);
 
     magicSize = strlen(magicStr);
-    for (int i = 0; i < magicSize; ++i) {
+    for (size_t i = 0; i < magicSize; ++i) {
         buffer[i] = magicStr[i] ^ 42;
     }
 }
