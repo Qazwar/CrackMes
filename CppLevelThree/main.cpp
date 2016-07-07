@@ -72,12 +72,12 @@ const std::vector<std::string> codes = { //size 18
     "Its amazing how much good you can do if you dont care who gets the credit." };
 
 int main(int argc, char* argv[]) try{
-    /*
+    
     if (IsDebuggerPresent()) {
         std::cerr << "Thats not how to you run me...\n";
         exit(-1);
     }
-    */
+    
     if (argc > 1) {
         if (argv[1] == std::string("--hint")) {
             std::cout << "Don't interupt me when I'm interupting.";
@@ -103,12 +103,12 @@ catch (...) {
     std::getline(std::cin, entry);
     Checker checker(codes[14], codes[8]);
     if (checker.checkMe(entry)) {
-        /*
+        
         if (IsDebuggerPresent()) {
             std::cerr << "Thats not how to you run me...\n";
             exit(-1);
         }
-        */
+        
         std::cout << winner;
     }
     else {
